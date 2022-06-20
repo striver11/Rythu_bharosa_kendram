@@ -1,0 +1,48 @@
+{% extends 'employee/employee_base.html' %}
+ 
+
+
+{% block content %}
+    <style>
+        .jumbotron {
+            margin-top: 300px;
+        }
+    </style>
+      
+    <div class="jumbotron">
+        <h1 class="text-center" style="margin-top: -120px;">Fertilizer Distribution List</h1>
+      
+        <table class="table">
+            <thead>
+            <tr>
+                <th scope="col">Sno</th>
+                <th scope="col">Farmer Name</th>
+                <th scope="col">Product</th>
+                <th scope="col">Status</th>
+               
+            </tr>
+            </thead>
+            <tbody>
+              {% for pd in products_distributions %}
+              <tr>
+                  
+                    <th>{{ forloop.counter }}</th>
+                    <td>{{ pd.farmer_name}}</td>
+                    <td>{{ pd.products}}</td>
+                    <td>
+                     {% if pd.status == True %}
+                        Distributed
+                     {% else %}
+                        Pending
+                     {% endif %}
+                    
+                    </td>
+              </tr>
+               {% endfor %}
+
+            </tbody>
+        </table>
+        <a href="{% url 'update_fertilizer_stock_details' %}">Update Fertilizer Stock Details</a>
+    </div>
+</div>
+{% endblock %}

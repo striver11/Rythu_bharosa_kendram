@@ -1,0 +1,33 @@
+{% extends 'farmer/farmer_base.html' %}
+
+
+{% block content %}
+    <style>
+        .jumbotron {
+            margin-top: 300px;
+        }
+    </style>
+    <div class="jumbotron">
+        <table class="table">
+            <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Product</th>
+                <th scope="col">status</th>
+                <th scope="col">your feedback</th>
+            </tr>
+            </thead>
+            <tbody>
+            {% for product in products %}
+                <tr>
+                    <th>{{ forloop.counter }}</th>
+                    <td> {{ product.products }}</td>
+                    <td> {{ product.status }}</td>
+                    <td><a href="{% url 'feedback' product.id %}">feedback</a> </td>
+                </tr>
+            {% endfor %}
+
+            </tbody>
+        </table>
+    </div>
+{% endblock %}
