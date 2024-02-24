@@ -1,6 +1,6 @@
 # rythu_bharosa_kendhram2
 
-#website login page : https://striver11.github.io/rythu_bharosa_kendhram2/
+# website login pag : https://striver11.github.io/rythu_bharosa_kendhram2/
 
 # RBK PROJECT REQUIREMENTS
 ## [BASIC USER INTERFACE](https://docs.google.com/document/d/19L5kb_sDg9_H8BLyAnKjsrNPPxS4DcbTiU8BmEBxHKc/edit?usp=sharing)
